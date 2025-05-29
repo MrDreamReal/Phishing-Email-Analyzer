@@ -42,7 +42,9 @@ PhishingEmailAnalyzer.ps1 is a PowerShell-based phishing detection script for cy
 
 💡 Example Usage
 
-powershell -ep bypass
-. .\Analyze-PhishingEmail.ps1
-Analyze-PhishingEmail -FilePath .\email.eml
+$powershell -ep bypass
+
+$. .\Analyze-PhishingEmail.ps1
+
+$Analyze-PhishingEmail -FilePath .\email.eml
     
