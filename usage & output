@@ -1,0 +1,33 @@
+#command:
+💡 Example Usage
+
+powershell -ep bypass
+. .\Analyze-PhishingEmail.ps1
+Analyze-PhishingEmail -FilePath .\email.eml
+
+
+📂 Sample Output:
+
+===== HEADER ANALYSIS =====
+WARNING: From header (support@apple.com) doesn't match Return-Path (mailer@phishy.biz)
+WARNING: SPF check failed or missing
+WARNING: DKIM check failed or missing
+WARNING: DMARC check failed or missing
+
+===== BODY ANALYSIS =====
+Found urgency keyword: account suspended
+Grammar/spelling issues detected: Generic greeting, Spelling error: 'plese click'
+
+===== LINK ANALYSIS =====
+Found 2 link(s) in the email body.
+WARNING: Known phishing domain detected - http://login-update.org
+WARNING: IP address found in URL - http://198.51.100.23/login
+
+===== ATTACHMENT ANALYSIS =====
+Found attachment: invoice.pdf.exe
+WARNING: Malicious attachment extension detected: invoice.pdf.exe
+WARNING: Double extension detected: invoice.pdf.exe
+
+===== FINAL THREAT ASSESSMENT =====
+Threat score: 105 / 150
+CONCLUSION: HIGH RISK - Likely phishing email.
