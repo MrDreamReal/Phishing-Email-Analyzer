@@ -36,15 +36,13 @@ PhishingEmailAnalyzer.ps1 is a PowerShell-based phishing detection script for cy
 📊 Threat Scoring & Risk Assessment
 
 
+    Assigns a threat score based on findings
+
+    Categorizes the email risk: Minimal, Low, Medium, or High Risk
+
 💡 Example Usage
 
 powershell -ep bypass
 . .\Analyze-PhishingEmail.ps1
 Analyze-PhishingEmail -FilePath .\email.eml
-
-    Assigns a threat score based on findings
-
-    Categorizes the email risk: Minimal, Low, Medium, or High Risk
-
-
     
